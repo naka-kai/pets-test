@@ -1,0 +1,174 @@
+@use "../../foundation/mixin" as m;
+
+.banner {
+  position: relative;
+  height: 500px;
+
+  @include m.mq(md) {
+    z-index: 1;
+    height: 550px;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+
+    @include m.mq(md) {
+      height: 500px;
+    }
+  }
+  .swiper {
+    overflow: visible;
+
+    .swiper-wrapper {
+      @include m.mq(lg) {
+        max-width: 1125px;
+      }
+
+      .swiper-slide {
+        @include m.mq(md) {
+          position: relative;
+        }
+
+        // @include m.mq(lg) {
+        //   width: 1125px !important;
+        // }
+
+        img {
+          @include m.mq(lg) {
+          }
+
+          @include m.mq(xl) {
+            border-radius: 6px;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    display: none;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-color: rgba($color: #fff, $alpha: 0.4);
+    color: #4e4e4f;
+    opacity: 1;
+    width: 40px;
+    height: 40px;
+    top: 56%;
+  }
+
+  .swiper-button-next {
+    right: 0px;
+  }
+
+  .swiper-button-prev {
+    left: 0px;
+  }
+
+  .description-box {
+    background-color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    margin: 0 15px;
+    padding: 18px 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -155px;
+    z-index: 30;
+
+    @include m.mq(md) {
+      background-color: rgba($color: #fff, $alpha: 0.6);
+      border-radius: 0;
+      margin: 0;
+      padding: 0;
+      top: 0;
+      bottom: 0;
+      right: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @include m.mq(lg) {
+      right: 60%;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      margin-top: 8px;
+
+      @include m.mq(lg) {
+        margin-top: 14px;
+      }
+    }
+
+    button {
+      margin: 14px 0 0;
+
+      @include m.mq(lg) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .swiper-pagination {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -155px;
+    z-index: 30;
+  }
+
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: -180px;
+
+    @include m.mq(md) {
+      bottom: -15px;
+    }
+  }
+
+  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin: 0 3px;
+  }
+
+  .swiper-pagination-clickable .swiper-pagination-bullet {
+    cursor: default;
+  }
+
+  .swiper-pagination-bullet {
+    width: 30px;
+    height: 3px;
+    display: inline-block;
+    border-radius: 0%;
+    background: #cec8c0;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #f3981b;
+  }
+}

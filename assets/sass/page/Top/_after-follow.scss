@@ -1,0 +1,153 @@
+@use "../../foundation/mixin" as m;
+
+.after-follow {
+  background-color: #fff;
+
+  .after-follow-container {
+    padding: 15px 0;
+
+    @include m.mq(sm01) {
+      max-width: 515px;
+      margin: 0 auto;
+    }
+
+    @include m.mq(md) {
+      max-width: 690px;
+    }
+
+    @include m.mq(lg) {
+      max-width: 930px;
+    }
+
+    @include m.mq(xl) {
+      max-width: 1125px;
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.after-follow-content-container {
+  margin-top: 15px;
+
+  @include m.mq(sm01) {
+    border-radius: 6px;
+  }
+
+  .after-follow-content {
+    position: relative;
+    margin-bottom: 230px;
+
+    .after-follow-content-box {
+      color: #202020;
+      text-align: center;
+      padding: 15px;
+      margin: auto 15px;
+      position: absolute;
+      bottom: -220px;
+      background-color: #fff;
+      border-radius: 6px;
+      box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.01);
+
+      h2 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      p {
+        font-size: 16px;
+        margin-top: 15px;
+        text-align: left;
+      }
+
+      button {
+        margin: 5px 0 15px;
+      }
+    }
+  }
+
+  .after-follow-content2 {
+    margin-bottom: 205px;
+
+    .after-follow-content-box {
+      bottom: -190px;
+    }
+  }
+}
+
+.after-follow-content2-box-container {
+  @include m.mq(sm02) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -15px 15px;
+  }
+
+  a {
+    @include m.mq(sm02) {
+      width: 50%;
+    }
+
+    @include m.mq(md) {
+      width: 33%;
+    }
+
+    .after-follow-content2-box {
+      padding: 0 0 15px;
+
+      @include m.mq(sm02) {
+        padding: 10px 15px;
+      }
+
+      .after-follow-content2 {
+        .after-follow-img-box {
+          display: flex;
+          justify-content: center;
+        }
+
+        p {
+          margin: 15px 15px 0;
+
+          @include m.mq(sm01) {
+            margin: 15px 0 0;
+          }
+        }
+
+        .after-follow-content2-description {
+          display: flex;
+          padding: 20px 0;
+          margin: 0 15px;
+
+          @include m.mq(sm01) {
+            margin: 0;
+          }
+
+          p {
+            margin: 0;
+            padding-left: 15px;
+            font-size: 16px;
+            font-weight: 700;
+            white-space: nowrap;
+            transition: all 0.2s;
+
+              &:hover {
+                color: #f3981c;
+              }
+          }
+
+          .hr {
+            display: block;
+            border-top: solid 1px #4c372b;
+            width: 100%;
+            height: 1px;
+            margin: auto 0;
+          }
+
+          i {
+            margin-left: 6px;
+          }
+        }
+      }
+    }
+  }
+}

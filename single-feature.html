@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="pets-test 特集ページ">
+    <!-- Reset CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/the-new-css-reset@1.7.3/css/reset.min.css"
+    />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/app.css" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Pets-test</title>
+  </head>
+  <body>
+
+    <!-- ヘッダー -->
+    <header class="header">
+      <div class="header-container">
+        <nav class="pc-nav">
+          <div class="pc-main-nav">
+            <div class="pc-main-nav-left">
+              <div class="pc-nav-logo">
+                <img src="./assets/images/logo.svg" alt="P's-first" />
+              </div>
+            </div>
+            <div class="pc-main-nav-right">
+              <div class="pc-nav-search">
+                <input
+                  type="text"
+                  name="search"
+                  id="search"
+                  placeholder="キーワードを入力して検索"
+                />
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <div class="pc-nav-login">
+                <a href="#">
+                  <i class="fa-solid fa-right-to-bracket"></i>
+                  会員ログイン
+                </a>
+              </div>
+              <div class="pc-nav-fab">
+                <a href="#">
+                  <i class="fa-solid fa-heart"></i>
+                  お気に入り
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="pc-sub-nav">
+            <ul class="pc-sub-nav-list">
+              <li class="pc-sub-nav-list-item pc-sub-nav-search">
+                <a href="#"
+                  ><span>探す</span><i class="fa-solid fa-caret-down"></i
+                ></a>
+                <ul class="pc-sub-nav-search-list">
+                  <li class="pc-sub-nav-search-list-item">
+                    <a href="#">
+                      <span> 子犬 </span>
+                      <span>
+                        <i class="fa-solid fa-caret-right"></i>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="pc-sub-nav-search-list-item">
+                    <a href="#">子猫<i class="fa-solid fa-caret-right"></i></a>
+                  </li>
+                  <li class="pc-sub-nav-search-list-item">
+                    <a href="#">店舗を探す</a>
+                  </li>
+                  <li class="pc-sub-nav-search-list-item">
+                    <a href="#">提携先を探す</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="pc-sub-nav-list-item"><a href="#">ランキング</a></li>
+              <li class="pc-sub-nav-list-item"><a href="#">ペットの安心</a></li>
+              <li class="pc-sub-nav-list-item">
+                <a href="#">ほっとサポート</a>
+              </li>
+              <li class="pc-sub-nav-list-item"><a href="#">特集一覧</a></li>
+              <li class="pc-sub-nav-list-item"><a href="#">サービス</a></li>
+              <li class="pc-sub-nav-list-item"><a href="#">ニュース</a></li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="sp-nav">
+          <div class="sp-nav-header">
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="sp-logo">
+              <img src="./assets/images/logo.svg" alt="P's-first" />
+            </div>
+            <div class="sp-nav-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+          <div class="side-bar">
+            <div class="side-nav-header side-nav-close-only">
+              <span class="side-nav-close"
+                >閉じる<span class="side-nav-close-icon">×</span></span
+              >
+            </div>
+            <ul class="side-nav-contents">
+              <li class="side-nav-link side-nav-search-link">
+                <p>探す</p>
+                <i class="fa-solid fa-caret-right"></i>
+              </li>
+              <li><a href="#">ランキング</a></li>
+              <li><a href="#">ペットの安心</a></li>
+              <li><a href="#">ほっとサポート</a></li>
+              <li><a href="#">特集一覧</a></li>
+              <li><a href="#">サービス</a></li>
+              <li><a href="#">ニュース</a></li>
+            </ul>
+            <div class="side-nav-menu">
+              <ul>
+                <li>
+                  <a href="#">
+                    <i class="fa-solid fa-heart"></i>
+                    お気に入り
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    会員ログイン
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="side-bar side-bar-search">
+            <div class="side-nav-header">
+              <span class="side-nav-back side-nav-search-back">戻る</span>
+              <span class="side-nav-close"
+                >閉じる<span class="side-nav-close-icon">×</span></span
+              >
+            </div>
+            <ul class="side-nav-contents">
+              <li class="side-bar-title"><p>探す</p></li>
+              <li class="side-nav-link side-nav-dog-link">
+                <p>子犬</p>
+                <i class="fa-solid fa-caret-right"></i>
+              </li>
+              <li class="side-nav-link side-nav-cat-link">
+                <p>子猫</p>
+                <i class="fa-solid fa-caret-right"></i>
+              </li>
+              <li><a href="#">店舗を探す</a></li>
+              <li><a href="#">提携先を探す</a></li>
+            </ul>
+            <div class="side-nav-menu">
+              <ul>
+                <li>
+                  <a href="#">
+                    <i class="fa-solid fa-heart"></i>
+                    お気に入り
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    会員ログイン
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="side-nav-cover"></div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="s-feature-container">
+
+        <!-- パンくずリスト -->
+        <section class="breadcrumbs s-feature-breadcrumbs">
+          <div class="breadcrumbs-container s-feature-breadcrumbs-container">
+            <ul>
+              <li><a href="">ホーム</a></li>
+              <li><span class="breadcrumbs-arrow"></span></li>
+              <li><a href="">ペット特集</a></li>
+              <li><span class="breadcrumbs-arrow"></span></li>
+              <li><a href="">ペッツファーストのミックス犬</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- タイトル部分 -->
+        <section class="s-feature-top">
+          <div class="s-feature-top-container">
+            <h1 class="s-feature-top-title">ペッツファーストのミックス犬</h1>
+            <div class="s-feature-top-text">
+              <span class="s-feature-top-category">Hot</span>
+              <span class="s-feature-top-date">2022/8/12</span>
+            </div>
+            <div class="s-feature-top-favorite-wrapper">
+              <div class="s-feature-top-favorite">
+                <span class="s-feature-top-favorite-heart">
+                  <i class="fa-regular fa-heart"></i>
+                </span>
+                <span class="s-feature-top-favorite-text">お気に入りに追加</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="s-feature-content-container">
+
+          <!-- FV -->
+          <section class="s-feature-fv">
+            <div class="s-feature-fv-img-box">
+              <img src="./assets/images/s_feature_image01_sp.jpg" class="s-feature-fv-img-sp" alt="ペッツファーストのミックス犬">
+              <img src="./assets/images/s_feature_image01.jpg" class="s-feature-fv-img-pc" alt="">
+            </div>
+          </section>
+
+          <!-- 概要説明 -->
+          <section class="s-feature-description">
+            <div class="s-feature-description-container">
+              <div class="sub-title-container">
+                <div class="sub-title sub-title5">
+                  <img src="./assets/images/s_feature_image02.jpg" alt="近年、人気が高まる「ミックス犬」" />
+                  <div class="sub-title-inner sub-title-inner5">
+                    <div class="sub-title-heading">
+                      <h2>近年、人気が高まる「ミックス犬」</h2>
+                    </div>
+                    <p>
+                      トイプードルやチワワなど異なる犬種同士を組み合わせた「ミックス犬」の人気が非常に高まっています。ミックス犬は純血種の犬と比べて、どのような顔つきや性格になるか予想しづらいのですが、その分見た目のバリエーションも豊富で、その点も唯一無二の魅力にもなって人気を集めています。
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="sub-title-container">
+                <div class="sub-title sub-title6">
+                  <img
+                    src="./assets/images/s_feature_image03.jpg"
+                    alt="「世界に一匹だけの可愛さ」が大きな魅力"
+                  />
+                  <div class="sub-title-inner sub-title-inner6">
+                    <div class="sub-title-heading">
+                      <h2>「世界に一匹だけの可愛さ」が大きな魅力</h2>
+                    </div>
+                    <p>
+                      同じ両親からうまれた兄弟であっても、それぞれお父さん似、お母さん似、と違いがあり、似た容姿に成長するとは限りません。カラーや模様の入り方、体格など、子犬から成長するにつれて容姿が変わることも多く、成犬になったらどんな姿になるのか、予想するのも楽しいものです。
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="sub-title-container">
+                <div class="sub-title sub-title7">
+                  <img src="./assets/images/s_feature_image04.jpg" alt="飼い方のポイントは、両親にあたる犬種を知ること" />
+                  <div class="sub-title-inner sub-title-inner7">
+                    <div class="sub-title-heading">
+                      <h2>飼い方のポイントは、両親にあたる犬種を知ること</h2>
+                    </div>
+                    <p>
+                      両親にあたる犬種を知ることにより、必要な食事量、運動量、かかりやすい病気等を知る目安になります。また、決まった飼育方法が確立されていないので、飼い主の方が常に犬の健康状態に気を配る必要があります。食事量や運動量を調節し、獣医師などに相談しつつ、ミックス犬に合った生活を送らせてあげなければいけません。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 人気のミックス犬 -->
+          <section class="s-feature-popular-mix">
+            <h2 class="s-feature-popular-mix-title">人気のミックス犬</h2>
+            <div class="s-feature-popular-mix-container">
+
+              <div class="description-box">
+                <div class="description-box-container">
+                  <div class="description-box-img-box">
+                    <img src="./assets/images/image_pick01.jpg" alt="マルプー">
+                  </div>
+                  <h3>マルプー</h3>
+                  <div class="description-box-text-box">
+                    <h4>マルチーズ<span>×</span>トイプードル</h4>
+                    <div class="description-contents">
+                      <div class="description-box-feature">
+                        <p class="description-box-feature-title">特徴：</p>
+                        <p class="description-box-feature-description">
+                          見た目は、マルチーズに近いものと、プードルに近いものがいますが、マルチーズとトイプードルが持ち合わせている、柔らかい巻き毛とクリンとした丸い目が特徴的です。また、耳も両親の垂れ耳を受け継いでいて、マルプーも同様に垂れ耳です。トイプードルに似ると首や足が長くなる傾向にあり、反対にマルチーズに似ると首や足が短くコロンとした見た目になります。
+                        </p>
+                      </div>
+                      <div class="description-box-character">
+                        <p class="description-box-character-title">性格：</p>
+                        <p class="description-box-character-description">
+                          マルプーのようなミックス犬は性格をはっきりと断言する事が難しいと言われていますが、トイプードルの「賢く甘えん坊な性格」とマルチーズの「人懐こい性格」を受け継いだ、明るく元気で優しい性格の子が多いです。遊んでいるときなどは元気いっぱいのやんちゃな一面もありながら、基本的には飼い主さんに愛情をたっぷり注ぐ温厚な子が多いです。
+                        </p>
+                      </div>
+                    </div>
+                    <div class="description-more-btn">
+                      <div class="description-box-more-box active">
+                        <p class="description-box-more">もっと見る</p>
+                        <span class="description-box-more-arrow"></span>
+                      </div>
+                      <div class="description-box-close-box">
+                        <p class="description-box-close">閉じる</p>
+                        <span class="description-box-close-arrow"></span>
+                      </div>
+                      <button class="description-box-search-btn" onclick="location.href='#'">さがす</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="description-box">
+                <div class="description-box-container">
+                  <div class="description-box-img-box">
+                    <img src="./assets/images/image_pick02.jpg" alt="チワマル">
+                  </div>
+                  <h3>チワマル</h3>
+                  <div class="description-box-text-box">
+                    <h4>チワワ<span>×</span>マルチーズ</h4>
+                    <div class="description-contents">
+                      <div class="description-box-feature">
+                        <p class="description-box-feature-title">特徴：</p>
+                        <p class="description-box-feature-description">
+                          見た目はちょっと小ぶりなマルチーズ、という印象で、チワワが混ざっていることで体が小さいです。毛並みもマルチーズ寄りで、ふわふわした毛を引き継ぐケースが多いです。ミックス犬なので外見に個体差がありますが、顔つきはどちらかというとチワワに似て、大きく丸い瞳と大きな耳を引き継いで産まれることも多いです。
+                        </p>
+                      </div>
+                      <div class="description-box-character">
+                        <p class="description-box-character-title">性格：</p>
+                        <p class="description-box-character-description">
+                          非常に優しくおおらかで、陽気な性格をしています。性格がチワワ寄りかマルチーズ寄りかは、仔犬の頃からの性格やしつけによって変わってきますが、基本的に、愛想が良く人懐っこい性格をしています。一方で、マルチーズの気の強さや、チワワの警戒心の強さなどを併せ持っているため、少し神経質で臆病な面もあります。
+                        </p>
+                      </div>
+                    </div>
+                    <div class="description-more-btn">
+                      <div class="description-box-more-box active">
+                        <p class="description-box-more">もっと見る</p>
+                        <span class="description-box-more-arrow"></span>
+                      </div>
+                      <div class="description-box-close-box">
+                        <p class="description-box-close">閉じる</p>
+                        <span class="description-box-close-arrow"></span>
+                      </div>
+                      <button class="description-box-search-btn" onclick="location.href='#'">さがす</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="description-box">
+                <div class="description-box-container">
+                  <div class="description-box-img-box">
+                    <img src="./assets/images/image_pick03.jpg" alt="ポメチワ">
+                  </div>
+                  <h3>ポメチワ</h3>
+                  <div class="description-box-text-box">
+                    <h4>ポメラニアン<span>×</span>チワワ</h4>
+                    <div class="description-contents">
+                      <div class="description-box-feature">
+                        <p class="description-box-feature-title">特徴：</p>
+                        <p class="description-box-feature-description">
+                          ふわふわな被毛と華やかな飾り毛が特徴のポメラニアンと、大きな瞳とアップルドームと呼ばれる丸い頭が特徴のチワワを掛け合わせて生まれたのがポメチワです。ミックス犬なので外見に個体差がありますが、一般的にはチワワの大きく丸い瞳と大きな耳を引き継いで産まれることも多いです。被毛についてはポメラニアンの毛質を受けつぎ、チワワよりも毛がふわふわとした犬になることが多いです。
+                        </p>
+                      </div>
+                      <div class="description-box-character">
+                        <p class="description-box-character-title">性格：</p>
+                        <p class="description-box-character-description">
+                          ポメラニアンの「好奇心旺盛で活発な性格」とチワワの「忠誠心が強く甘えん坊な性格」を受け継いだ人懐こく、元気いっぱいな子が多いです。一方、ポメチワの両親であるポメラニアンとチワワも警戒心が強いため、家族以外の人や他の犬に対して強い警戒心を抱くことがあります。無駄吠えや吠え癖は子犬のうちからしつけをして直すようにしましょう。
+                        </p>
+                      </div>
+                    </div>
+                    <div class="description-more-btn">
+                      <div class="description-box-more-box active">
+                        <p class="description-box-more">もっと見る</p>
+                        <span class="description-box-more-arrow"></span>
+                      </div>
+                      <div class="description-box-close-box">
+                        <p class="description-box-close">閉じる</p>
+                        <span class="description-box-close-arrow"></span>
+                      </div>
+                      <button class="description-box-search-btn" onclick="location.href='#'">さがす</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="description-box">
+                <div class="description-box-container">
+                  <div class="description-box-img-box">
+                    <img src="./assets/images/image_pick04.jpg" alt="チワックス">
+                  </div>
+                  <h3>チワックス</h3>
+                  <div class="description-box-text-box">
+                    <h4>チワワ<span>×</span>ミニチュアダックスフンド</h4>
+                    <div class="description-contents">
+                      <div class="description-box-feature">
+                        <p class="description-box-feature-title">特徴：</p>
+                        <p class="description-box-feature-description">
+                          世界最小の愛玩犬チワワと、人気犬種ランキング上位の常連、ミニチュアダックスフントを掛け合わせて生まれたのがチワックスです。Ｍダックスのような長めのボディと垂れた耳（品種によっては両方もしくは片方が半立ち耳になることもあります。）に、チワワ特有の丸くて大きな潤んだ丸い瞳、アップル・ヘッドといわれるドーム状の丸い頭の形状に特徴があり、まるで小さなぬいぐるみのような愛らしい表情は非常に人気があります。
+                        </p>
+                      </div>
+                      <div class="description-box-character">
+                        <p class="description-box-character-title">性格：</p>
+                        <p class="description-box-character-description">
+                          チワワの「愛情深く飼い主に忠実な性格」と、ダックスフンドの「フレンドリーで落ち着きのある性格」を受け継いだ、茶目っ気があり、甘え上手な子が多いです。飼い主さんにスリスリ、抱っこされるのも大好きです。一方、チワックスの両親であるチワワとダックスフンドどちらも警戒心と気が強いため、家族以外の人や他の犬に対して強い警戒心を抱くことがあります。
+                        </p>
+                      </div>
+                    </div>
+                    <div class="description-more-btn">
+                      <div class="description-box-more-box active">
+                        <p class="description-box-more">もっと見る</p>
+                        <span class="description-box-more-arrow"></span>
+                      </div>
+                      <div class="description-box-close-box">
+                        <p class="description-box-close">閉じる</p>
+                        <span class="description-box-close-arrow"></span>
+                      </div>
+                      <button class="description-box-search-btn" onclick="location.href='#'">さがす</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="description-box">
+                <div class="description-box-container">
+                  <div class="description-box-img-box">
+                    <img src="./assets/images/image_pick05.jpg" alt="チワプー">
+                  </div>
+                  <h3>チワプー</h3>
+                  <div class="description-box-text-box">
+                    <h4>チワワ<span>×</span>トイプードル</h4>
+                    <div class="description-contents">
+                      <div class="description-box-feature">
+                        <p class="description-box-feature-title">特徴：</p>
+                        <p class="description-box-feature-description">
+                          世界最小の愛玩犬チワワと、人気犬種ランキングTOPのトイプードルを掛け合わせて生まれたのがチワプーです。小さめの頭部とクリクリした瞳が特徴です。プードルの血統が入っていることから、パピーも同様の巻き毛の特徴を受け継ぐ場合が多々あります。サイズについては、ミックス全体の中では小型の種類ですが、チワワより多少大きめです。プードルの特徴を受け継ぎ、たれ耳の子が多く、フワフワで抜け毛の少ない毛質をしています。
+                        </p>
+                      </div>
+                      <div class="description-box-character">
+                        <p class="description-box-character-title">性格：</p>
+                        <p class="description-box-character-description">
+                          チワワの「愛情深く飼い主に忠実な性格」と、プードルの「社交性が高く、落ち着いた性格」を受け継いだ、陽気で賢い子が多いといわれています。一方。チワワ寄りの性格をしていると警戒心が強く少し臆病な性格になるかもしれませんが、チワワは家族に対する愛情がとても深い犬として知られています。どちらの性格になるかは、育ててみないとわからないというのがミックス犬の魅力でもあります。
+                        </p>
+                      </div>
+                    </div>
+                    <div class="description-more-btn">
+                      <div class="description-box-more-box active">
+                        <p class="description-box-more">もっと見る</p>
+                        <span class="description-box-more-arrow"></span>
+                      </div>
+                      <div class="description-box-close-box">
+                        <p class="description-box-close">閉じる</p>
+                        <span class="description-box-close-arrow"></span>
+                      </div>
+                      <button class="description-box-search-btn" onclick="location.href='#'">さがす</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="description-box">
+                <div class="description-box-container">
+                  <div class="description-box-img-box">
+                    <img src="./assets/images/image_pick06.jpg" alt="ポメプー">
+                  </div>
+                  <h3>ポメプー</h3>
+                  <div class="description-box-text-box">
+                    <h4>ポメラニアン<span>×</span>トイプードル</h4>
+                    <div class="description-contents">
+                      <div class="description-box-feature">
+                        <p class="description-box-feature-title">特徴：</p>
+                        <p class="description-box-feature-description">
+                          どちらかというとポメラニアンの特徴が出やすいといわれていますが、耳は垂れ耳と立ち耳、どちらも可能性があります。両親犬はどちらも被毛が豊富なため、毛の量は多め。ポメラニアン寄りのストレートの長毛の子とプードル寄りの巻き毛の子、どちらもいます。体型についてはプードルに似ることが多いとされており、足が長くスタイルが良い子が多いです。
+                        </p>
+                      </div>
+                      <div class="description-box-character">
+                        <p class="description-box-character-title">性格：</p>
+                        <p class="description-box-character-description">
+                          トイプードルの頭の良さと、ポメラニアンの甘えん坊なところを受け継いでおり、非常にしつけがしやすいといわれています。明るく陽気で遊ぶことが大好き。活発なので、いろいろな場所にお出かけしてあげると喜びますよ。好奇心旺盛ではありますが、初対面の人や物音に対して警戒心が強めに出ることもありますので、子犬の頃からいろいろな動物や人に触れ合わせ、社会性を身につけておきましょう。
+                        </p>
+                      </div>
+                    </div>
+                    <div class="description-more-btn">
+                      <div class="description-box-more-box active">
+                        <p class="description-box-more">もっと見る</p>
+                        <span class="description-box-more-arrow"></span>
+                      </div>
+                      <div class="description-box-close-box">
+                        <p class="description-box-close">閉じる</p>
+                        <span class="description-box-close-arrow"></span>
+                      </div>
+                      <button class="description-box-search-btn" onclick="location.href='#'">さがす</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+      <div class="footer-toggle-container">
+        <input type="checkbox" id="search" class="toggle" />
+        <label for="search" class="top-label">
+          <span class="footer-toggle-title">さがす</span>
+          <span>
+            <i class="fa-solid fa-angle-down"></i>
+            <i class="fa-solid fa-angle-up"></i>
+          </span>
+        </label>
+        <ul class="link-list">
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              子犬をさがす
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              子猫をさがす
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              店舗をさがす
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              提携先をさがす
+            </li>
+          </a>
+        </ul>
+        <input type="checkbox" id="ranking" class="toggle" />
+        <label for="ranking" class="top-label">
+          <span class="footer-toggle-title">ランキング</span>
+          <span>
+            <i class="fa-solid fa-angle-down"></i>
+            <i class="fa-solid fa-angle-up"></i>
+          </span>
+        </label>
+        <ul class="link-list">
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              子犬ランキング
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              子猫ランキング
+            </li>
+          </a>
+        </ul>
+        <input type="checkbox" id="point" class="toggle" />
+        <label for="point" class="top-label">
+          <span class="footer-toggle-title">ペットの安心</span>
+          <span>
+            <i class="fa-solid fa-angle-down"></i>
+            <i class="fa-solid fa-angle-up"></i>
+          </span>
+        </label>
+        <ul class="link-list">
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              優良ブリーダーとの取引
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              ペットの健康管理
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              店舗での取り組み
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              お客様へのサポート
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              ドクターズチェックプログラム
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              ほっとサポート
+            </li>
+          </a>
+        </ul>
+        <input type="checkbox" id="CSR" class="toggle" />
+        <label for="CSR" class="top-label">
+          <span class="footer-toggle-title">すべてのペットの幸せのために</span>
+          <span>
+            <i class="fa-solid fa-angle-down"></i>
+            <i class="fa-solid fa-angle-up"></i>
+          </span>
+        </label>
+        <ul class="link-list">
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              里親探し活動
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              ペットの難病対策
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              人とペットの共生のために
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              ペッツファーストの想い
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              マンスリーペットレポート
+            </li>
+          </a>
+        </ul>
+        <input type="checkbox" id="feature" class="toggle" />
+        <label for="feature" class="top-label">
+          <span class="footer-toggle-title">特集</span>
+          <span>
+            <i class="fa-solid fa-angle-down"></i>
+            <i class="fa-solid fa-angle-up"></i>
+          </span>
+        </label>
+        <ul class="link-list">
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              ペット特集トップ
+            </li>
+          </a>
+        </ul>
+        <input type="checkbox" id="service" class="toggle" />
+        <label for="service" class="top-label">
+          <span class="footer-toggle-title">サービス</span>
+          <span>
+            <i class="fa-solid fa-angle-down"></i>
+            <i class="fa-solid fa-angle-up"></i>
+          </span>
+        </label>
+        <ul class="link-list">
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              ほっとサポート提携サービス
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              ペッツファースト動物病院グループ
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              Miss BIBI
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              ペットケア&アダプションセンター日光
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              オリジナルフォトブック
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              オリジナルカレンダー
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              For English
+            </li>
+          </a>
+        </ul>
+        <input type="checkbox" id="company" class="toggle" />
+        <label for="company" class="top-label">
+          <span class="footer-toggle-title">会社情報</span>
+          <span>
+            <i class="fa-solid fa-angle-down"></i>
+            <i class="fa-solid fa-angle-up"></i>
+          </span>
+        </label>
+        <ul class="link-list">
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              会社情報
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              事業概要
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              経営理念
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              お客様の声
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              ニュース
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              採用情報
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              ブリーダー募集
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              プライバシーポリシー
+            </li>
+          </a>
+          <a href="#">
+            <li class="link-item">
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+              お問い合わせ
+            </li>
+          </a>
+        </ul>
+      </div>
+
+      <div class="footer-container">
+        <div class="footer-s-r-p-c footer-4block">
+          <div class="footer-search-ranking footer-2block">
+            <div class="footer-search footer-1block">
+              <h3>Search さがす</h3>
+              <ul class="link-list">
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    子犬をさがす
+                  </li>
+                </a>
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    子猫をさがす
+                  </li>
+                </a>
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    店舗をさがす
+                  </li>
+                </a>
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    提携先をさがす
+                  </li>
+                </a>
+              </ul>
+            </div>
+            <div class="footer-ranking footer-1block">
+              <h3>Ranking ランキング</h3>
+              <ul class="link-list">
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    子犬ランキング
+                  </li>
+                </a>
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    子猫ランキング
+                  </li>
+                </a>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-point-csr footer-2block">
+            <div class="footer-point footer-1block">
+              <h3>Point ペットの安心</h3>
+              <ul class="link-list">
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    優良ブリーダーとの取引
+                  </li>
+                </a>
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    ペットの健康管理
+                  </li>
+                </a>
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    店舗での取り組み
+                  </li>
+                </a>
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    お客様へのサポート
+                  </li>
+                </a>
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    ドクターズチェックプログラム
+                  </li>
+                </a>
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    ほっとサポート
+                  </li>
+                </a>
+              </ul>
+            </div>
+            <div class="footer-csr footer-1block">
+              <h3>CSR すべてのペットの幸せのために</h3>
+              <ul class="link-list">
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    里親探し活動
+                  </li>
+                </a>
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    ペットの難病対策
+                  </li>
+                </a>
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    人とペットの共生のために
+                  </li>
+                </a>
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    ペッツファーストの想い
+                  </li>
+                </a>
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    マンスリーペットレポート
+                  </li>
+                </a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-f-s-c footer-4block">
+          <div class="footer-feature-service footer-2block">
+            <div class="footer-feature footer-1block">
+              <h3>Feature 特集</h3>
+              <ul class="link-list">
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    ペット特集トップ
+                  </li>
+                </a>
+              </ul>
+            </div>
+            <div class="footer-service footer-1block">
+              <h3>Service サービス</h3>
+              <ul class="link-list">
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    ほっとサポート提携サービス
+                  </li>
+                </a>
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    ペッツファースト動物病院グループ
+                  </li>
+                </a>
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    Miss BIBI
+                  </li>
+                </a>
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    ペットケア&アダプションセンター日光
+                  </li>
+                </a>
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    オリジナルフォトブック
+                  </li>
+                </a>
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    オリジナルカレンダー
+                  </li>
+                </a>
+                <a href="#">
+                  <li class="link-item">
+                    <span>
+                      <i class="fa-solid fa-caret-right"></i>
+                    </span>
+                    For English
+                  </li>
+                </a>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-company footer-2block footer-1block">
+            <h3>Company 会社情報</h3>
+            <ul class="link-list">
+              <a href="#">
+                <li class="link-item">
+                  <span>
+                    <i class="fa-solid fa-caret-right"></i>
+                  </span>
+                  会社情報
+                </li>
+              </a>
+              <a href="#">
+                <li class="link-item">
+                  <span>
+                    <i class="fa-solid fa-caret-right"></i>
+                  </span>
+                  事業概要
+                </li>
+              </a>
+              <a href="#">
+                <li class="link-item">
+                  <span>
+                    <i class="fa-solid fa-caret-right"></i>
+                  </span>
+                  経営理念
+                </li>
+              </a>
+              <a href="#">
+                <li class="link-item">
+                  <span>
+                    <i class="fa-solid fa-caret-right"></i>
+                  </span>
+                  お客様の声
+                </li>
+              </a>
+              <a href="#">
+                <li class="link-item">
+                  <span>
+                    <i class="fa-solid fa-caret-right"></i>
+                  </span>
+                  ニュース
+                </li>
+              </a>
+              <a href="#">
+                <li class="link-item">
+                  <span>
+                    <i class="fa-solid fa-caret-right"></i>
+                  </span>
+                  採用情報
+                </li>
+              </a>
+              <a href="#">
+                <li class="link-item">
+                  <span>
+                    <i class="fa-solid fa-caret-right"></i>
+                  </span>
+                  ブリーダー募集
+                </li>
+              </a>
+              <a href="#">
+                <li class="link-item">
+                  <span>
+                    <i class="fa-solid fa-caret-right"></i>
+                  </span>
+                  プライバシーポリシー
+                </li>
+              </a>
+              <a href="#">
+                <li class="link-item">
+                  <span>
+                    <i class="fa-solid fa-caret-right"></i>
+                  </span>
+                  お問い合わせ
+                </li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-icons">
+          <div class="footer-sns-icons">
+            <a href="#"
+              ><img src="./assets/images/icon-facebook.svg" alt="facebook"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/icon-instagram.svg" alt="instagram"
+            /></a>
+          </div>
+          <div class="footer-to-top-icon">
+            <i class="fa-solid fa-circle-arrow-up"></i>
+          </div>
+        </div>
+        <div class="footer-copy">
+          <small>©P's first All Rights Reserved.</small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Swiper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+    <!-- JS -->
+    <script src="./assets/js/index.js" defer></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: 'ease-out-quad',
+        // once: true
+      });
+    </script>
+  </body>
+</html>

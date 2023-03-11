@@ -1,0 +1,297 @@
+@use "../../foundation/mixin" as m;
+
+.search-container {
+  width: 100%;
+  margin: 0 auto;
+
+  @include m.mq(sm01) {
+    max-width: 515px;
+  }
+
+  @include m.mq(md) {
+    max-width: 690px;
+  }
+
+  @include m.mq(lg) {
+    max-width: 930px;
+  }
+
+  @include m.mq(xl) {
+    max-width: 1125px;
+  }
+}
+
+.animal-box {
+  background-color: #fff;
+
+  @include m.mq(lg) {
+    background-color: transparent;
+  }
+}
+
+.tab-menu {
+  display: flex;
+  padding-top: 20px;
+
+  @include m.mq(lg) {
+    display: none;
+  }
+}
+
+.tab-menu-item {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #808080;
+  width: 50%;
+  text-align: center;
+  font-weight: 700;
+  border-bottom: #fff;
+}
+
+.tab-menu-item.is-active {
+  border-bottom: 2px #4c372b solid;
+  color: #4c372b;
+}
+
+.tab-menu-item .fa-caret-down {
+  display: none;
+}
+
+.tab-menu-item.is-active .fa-caret-down {
+  display: block;
+}
+
+.animal-list-container {
+  width: 100%;
+
+  @include m.mq(lg) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.animal-list {
+  display: none;
+  transition: all 0.2s ease;
+
+  @include m.mq(lg) {
+    display: block;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    background-color: #fff;
+    width: calc(50% - 15px);
+  }
+
+  .animal-list-title {
+    display: none;
+    text-align: center;
+    padding-top: 15px;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 8px;
+
+    @include m.mq(lg) {
+      display: block;
+    }
+  }
+}
+
+.animal-list.is-show {
+  display: block;
+}
+
+.animal-item-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 7.5px;
+  padding-bottom: 7.5px;
+
+  a {
+    display: block;
+    width: calc(50% - 20px);
+    margin: 7.5px;
+
+    @include m.mq(md) {
+      width: calc(33% - 20px);
+    }
+  }
+}
+
+.animal-item {
+  position: relative;
+
+  img {
+    object-fit: cover;
+    height: 230px;
+    border-radius: 6px;
+    vertical-align: top;
+    // box-shadow: 1px 1px 2px 2px #000 inset;
+    // position: relative;
+
+    @include m.mq(md) {
+      height: 200px;
+    }
+
+    @include m.mq(lg) {
+      border-radius: 10px;
+      height: 130px;
+    }
+
+    @include m.mq(xl) {
+      height: 160px;
+    }
+  }
+
+  .animal-name {
+    width: 100%;
+    position: absolute;
+    // bottom: 15px;
+    bottom: 0;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0),
+      rgba(22, 22, 22, 0.63)
+    );
+    border-radius: 6px;
+
+    @include m.mq(lg) {
+      // bottom: 5px;
+      bottom: 0;
+      padding-bottom: 5px;
+    }
+
+    p {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      margin-left: 10px;
+    }
+
+    i {
+      color: #fff;
+      margin-right: 10px;
+    }
+  }
+}
+
+.all-animal {
+  border: solid 3px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #4c372b;
+    color: #fff;
+    border: solid 3px #4c372b;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 700;
+
+    i {
+      margin-left: 3px;
+    }
+  }
+}
+
+.search-shop {
+  padding: 0 15px;
+
+  @include m.mq(sm01) {
+    padding: 0;
+  }
+
+  .search-shop-title {
+    display: flex;
+    margin: 25px 0;
+
+    @include m.mq(md) {
+      display: none;
+    }
+
+    p {
+      padding: 0 10px;
+      font-size: 20px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .hr {
+      display: block;
+      border-top: solid 1px #4c372b;
+      width: 100%;
+      height: 1px;
+      margin: auto 0;
+    }
+  }
+
+  .search-shops {
+    @include m.mq(sm01) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include m.mq(md) {
+      margin-top: 40px;
+      justify-content: center;
+    }
+
+    .near-shop,
+    .partner-shop {
+      font-size: 16px;
+      font-weight: 700;
+      border: 2px solid #4c372b;
+      padding: 8px 0;
+      width: 100%;
+      text-align: center;
+      border-radius: 6px;
+      transition: 0.2s;
+
+      @include m.mq(sm01) {
+        width: 250px;
+      }
+
+      @include m.mq(md) {
+        width: auto;
+        padding: 8px 15px;
+      }
+    }
+
+    .near-shop {
+      background-color: #4c372b;
+      color: #fff;
+      margin-bottom: 15px;
+
+      @include m.mq(md) {
+        margin-right: 15px;
+      }
+
+      &:hover {
+        background-color: #fff;
+        color: #4c372b;
+      }
+    }
+
+    .partner-shop {
+      background-color: #fff;
+      color: #4c372b;
+      margin-bottom: 65px;
+
+      &:hover {
+        background-color: #4c372b;
+        color: #fff;
+      }
+    }
+  }
+}

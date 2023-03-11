@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+.banner {
+  position: relative;
+  height: 500px;
+}
+
+@media screen and (min-width: 769px) {
+  .banner {
+    z-index: 1;
+    height: 550px;
+  }
+}
+
+.banner img {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 300px;
+}
+
+@media screen and (min-width: 769px) {
+  .banner img {
+    height: 500px;
+  }
+}
+
+.banner .swiper {
+  overflow: visible;
+}
+
+@media screen and (min-width: 992px) {
+  .banner .swiper .swiper-wrapper {
+    max-width: 1125px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .banner .swiper .swiper-wrapper .swiper-slide {
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .banner .swiper .swiper-wrapper .swiper-slide img {
+    border-radius: 6px;
+    margin: 0 auto;
+  }
+}
+
+.banner .swiper-button-next::after,
+.banner .swiper-button-prev::after {
+  display: none;
+}
+
+.banner .swiper-button-next,
+.banner .swiper-button-prev {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #4e4e4f;
+  opacity: 1;
+  width: 40px;
+  height: 40px;
+  top: 56%;
+}
+
+.banner .swiper-button-next {
+  right: 0px;
+}
+
+.banner .swiper-button-prev {
+  left: 0px;
+}
+
+.banner .description-box {
+  background-color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  margin: 0 15px;
+  padding: 18px 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -155px;
+  z-index: 30;
+}
+
+@media screen and (min-width: 769px) {
+  .banner .description-box {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .banner .description-box {
+    right: 60%;
+  }
+}
+
+.banner .description-box h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.banner .description-box h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.banner .description-box p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+@media screen and (min-width: 992px) {
+  .banner .description-box p {
+    margin-top: 14px;
+  }
+}
+
+.banner .description-box button {
+  margin: 14px 0 0;
+}
+
+@media screen and (min-width: 992px) {
+  .banner .description-box button {
+    margin-top: 20px;
+  }
+}
+
+.banner .swiper-pagination {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -155px;
+  z-index: 30;
+}
+
+.banner .swiper-horizontal>.swiper-pagination-bullets,
+.banner .swiper-pagination-bullets.swiper-pagination-horizontal,
+.banner .swiper-pagination-custom,
+.banner .swiper-pagination-fraction {
+  bottom: -180px;
+}
+
+@media screen and (min-width: 769px) {
+
+  .banner .swiper-horizontal>.swiper-pagination-bullets,
+  .banner .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .banner .swiper-pagination-custom,
+  .banner .swiper-pagination-fraction {
+    bottom: -15px;
+  }
+}
+
+.banner .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.banner .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 3px;
+}
+
+.banner .swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: default;
+}
+
+.banner .swiper-pagination-bullet {
+  width: 30px;
+  height: 3px;
+  display: inline-block;
+  border-radius: 0%;
+  background: #cec8c0;
+  opacity: 1;
+}
+
+.banner .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #f3981b;
+}

@@ -1,0 +1,169 @@
+@use "../../foundation/mixin" as m;
+
+.description-box {
+  padding-bottom: 50px;
+  margin: 40px 0;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.04);
+
+  @include m.mq(md) {
+    width: 45%;
+    margin-bottom: 0;
+  }
+
+  @include m.mq(md02) {
+    width: 30%;
+  }
+
+  .description-box-container {
+    h3 {
+      font-weight: 700;
+      font-size: 18px;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .description-box-text-box {
+      width: 90%;
+      margin: 0 auto;
+      font-size: 13px;
+      color: #202020;
+      font-weight: 400;
+      // position: relative;
+      height: auto;
+      overflow: hidden;
+      transition: max-height 1s;
+
+      h4 {
+        font-weight: 700;
+        font-size: 18px;
+        color: #808080;
+        margin-bottom: 10px;
+      }
+
+      .description-contents {
+        position: relative;
+        height: auto;
+        overflow: hidden;
+        max-height: 200px;
+        transition: max-height 0.3s;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0),
+            rgba(255, 253, 253, 1)
+          );
+        }
+
+        &.open {
+          &::after {
+            z-index: -1;
+            opacity: 0;
+          }
+        }
+
+        .description-box-feature {
+          margin-bottom: 10px;
+          .description-box-feature-title {
+            margin-bottom: 1px;
+          }
+        }
+
+        .description-box-character {
+          .description-box-character-title {
+            margin-bottom: 1px;
+          }
+        }
+      }
+
+      .description-more-btn {
+        display: block;
+
+        .description-box-more-box {
+          display: none;
+
+          &.active {
+            display: block;
+            font-size: 16px;
+            color: #4c372b;
+            padding: 15px;
+            margin-bottom: 10px;
+            position: relative;
+            cursor: pointer;
+
+            .description-box-more {
+              text-align: center;
+            }
+
+            .description-box-more-arrow {
+              position: absolute;
+              right: 60px;
+              top: 25%;
+              display: inline-block;
+              width: 16px;
+              height: 16px;
+              border: 2px solid;
+              border-color: transparent transparent #4c372b #4c372b;
+              transform: rotate(-45deg);
+              border-radius: 2px;
+            }
+          }
+        }
+
+        .description-box-close-box {
+          display: none;
+
+          &.active {
+            display: block;
+            font-size: 16px;
+            color: #4c372b;
+            padding: 15px;
+            margin-bottom: 10px;
+            position: relative;
+            cursor: pointer;
+
+            .description-box-close {
+              text-align: center;
+            }
+
+            .description-box-close-arrow {
+              position: absolute;
+              right: 60px;
+              top: 45%;
+              display: inline-block;
+              width: 16px;
+              height: 16px;
+              border: 2px solid;
+              border-color: transparent transparent #4c372b #4c372b;
+              transform: rotate(-225deg);
+              border-radius: 2px;
+            }
+          }
+        }
+
+        .description-box-search-btn {
+          background-color: #4c372b;
+          padding: 15px;
+          border-radius: 6px;
+          font-size: 14px;
+          font-weight: 700;
+          color: #fff;
+          text-align: center;
+          width: 100%;
+
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+}

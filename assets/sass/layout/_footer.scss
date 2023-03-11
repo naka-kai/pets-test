@@ -1,0 +1,243 @@
+@use "../foundation/mixin" as m;
+
+footer {
+  background-color: #4c372b;
+  color: #fff;
+
+  .footer-toggle-container {
+    .toggle {
+      display: none;
+
+      &:checked + .top-label + .link-list {
+        height: auto;
+        padding-bottom: 20px;
+      }
+
+      &:checked + .top-label .fa-angle-down {
+        display: none;
+      }
+
+      &:checked + .top-label .fa-angle-up {
+        display: block;
+      }
+    }
+
+    .top-label {
+      display: flex;
+      justify-content: space-between;
+      padding: 13px 10px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 14px;
+
+      .fa-angle-up {
+        display: none;
+      }
+    }
+
+    .top-label,
+    .link-list {
+      backface-visibility: hidden;
+    }
+
+    .link-list {
+      height: 0;
+      padding: 0 5px;
+      overflow: hidden;
+      border-bottom: 1px solid #73635b;
+
+      a {
+        &:hover {
+          border-bottom: 1px solid #fff;
+        }
+
+        .link-item {
+          padding: 4px 0;
+          font-weight: 400;
+          font-size: 14px;
+
+          .fa-caret-right {
+            padding-right: 3px;
+          }
+        }
+      }
+    }
+
+    @include m.mq(sm01) {
+      display: none;
+    }
+  }
+
+  .footer-container {
+    display: none;
+
+    @include m.mq(sm01) {
+      display: block;
+      padding: 30px 0;
+      border-bottom: 1px solid #73635b;
+    }
+
+    @include m.mq(md) {
+      max-width: 690px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include m.mq(lg) {
+      max-width: 930px;
+    }
+
+    @include m.mq(xl) {
+      max-width: 1125px;
+    }
+
+    .footer-4block {
+      @include m.mq(sm01) {
+        display: flex;
+      }
+
+      @include m.mq(lg) {
+        justify-content: space-between;
+      }
+    }
+
+    .footer-2block {
+      @include m.mq(sm01) {
+        display: block;
+        width: 50%;
+        padding: 5px;
+      }
+
+      @include m.mq(md) {
+        padding: 0 5px;
+      }
+
+      // @include m.mq(lg) {
+      //   padding: 0 20px;
+      // }
+    }
+
+    .footer-1block {
+      @include m.mq(sm01) {
+        padding: 10px 0;
+      }
+
+      @include m.mq(lg) {
+        padding: 5px 20px;
+      }
+    }
+
+    h3 {
+      @include m.mq(sm01) {
+        display: none;
+
+        @include m.mq(sm02) {
+          display: block;
+          font-weight: 700;
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    .link-list {
+      @include m.mq(sm01) {
+        display: block;
+      }
+
+      a {
+        @include m.mq(sm01) {
+          opacity: 0.7;
+          transition: all 0.3s ease;
+
+          &:hover {
+            opacity: 1;
+            transition: all 0.3s ease;
+          }
+        }
+
+        .link-item {
+          @include m.mq(sm01) {
+            padding: 4px 0;
+            font-weight: 400;
+            font-size: 14px;
+          }
+
+          .fa-caret-right {
+            @include m.mq(sm01) {
+              padding-right: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    @include m.mq(md) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 30px;
+    }
+
+    .footer-icons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 50px 7px 30px;
+
+      @include m.mq(md) {
+        margin: 0;
+        align-items: start;
+      }
+
+      a {
+        padding: 0;
+      }
+
+      .footer-sns-icons {
+        display: flex;
+        a {
+          img {
+            width: 45px;
+            margin-right: 7px;
+
+            @include m.mq(md) {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+
+      .footer-to-top-icon {
+        cursor: pointer;
+
+        i {
+          font-size: 35px;
+
+          @include m.mq(md) {
+            margin-left: 30px;
+          }
+        }
+      }
+    }
+
+    .footer-copy {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 60px;
+
+      @include m.mq(md) {
+        align-items: center;
+        padding-bottom: 0;
+      }
+
+      small {
+        font-weight: 400;
+        font-size: 13px;
+      }
+    }
+  }
+}

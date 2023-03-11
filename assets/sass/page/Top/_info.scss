@@ -1,0 +1,91 @@
+@use "../../foundation/mixin" as m;
+
+.info-container {
+  margin: 0 15px;
+
+  @include m.mq(sm01) {
+    max-width: 515px;
+    margin: 0 auto;
+  }
+
+  @include m.mq(sm02) {
+    max-width: 515px;
+  }
+
+  @include m.mq(md) {
+    max-width: 690px;
+  }
+
+  @include m.mq(lg) {
+    max-width: 930px;
+  }
+
+  @include m.mq(xl) {
+    max-width: 1125px;
+  }
+
+  .info-box {
+    background-color: #fff;
+    border: solid #a1998c 1px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    cursor: pointer;
+
+    @include m.mq(lg) {
+      padding: 15px 30px;
+    }
+
+    .info-right {
+      @include m.mq(lg) {
+        display: flex;
+        align-items: center;
+      }
+
+      .info-category {
+        display: none;
+
+        @include m.mq(lg) {
+          display: block;
+          font-weight: 700;
+          padding: 0 35px 0 25px;
+        }
+      }
+
+      .info-text-box {
+        @include m.mq(lg) {
+          // padding: 5px 0;
+        }
+
+        .info-text {
+          @include m.mq(lg) {
+            border-left: 1px solid #e8e8e8;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            padding: 10px 0;
+          }
+          &:hover {
+            p,
+            span {
+              border-bottom: 1px solid;
+            }
+          }
+        }
+      }
+
+      small {
+        display: block;
+        margin-top: 7px;
+        color: #a59c95;
+
+        @include m.mq(lg) {
+          margin: 0;
+          padding: 0 15px 0 15px;
+        }
+      }
+    }
+  }
+}

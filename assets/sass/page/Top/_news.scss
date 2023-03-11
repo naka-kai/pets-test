@@ -1,0 +1,12 @@
+@use "../../foundation/mixin" as m;
+
+.news {
+  padding: 15px 0 50px;
+
+  .news-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

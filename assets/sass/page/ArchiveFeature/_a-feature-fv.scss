@@ -1,0 +1,48 @@
+@use "../../foundation/mixin" as m;
+
+.a-feature-fv {
+  .a-feature-fv-container {
+    margin-bottom: 60px;
+    position: relative;
+    .a-feature-fv-img-box {
+      .a-feature-fv-img-sp {
+        display: block;
+        height: 350px;
+        width: 100%;
+        object-fit: cover;
+
+        @include m.mq(md) {
+          display: none;
+        }
+      }
+
+      .a-feature-fv-img-pc {
+        display: none;
+
+        @include m.mq(md) {
+          display: block;
+          height: 550px;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .a-feature-fv-text {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: rgba($color: #fff, $alpha: 0.85);
+      padding: 13px 85px;
+      font-weight: 700;
+
+      @include m.mq(md) {
+        right: 0;
+        left: auto;
+        padding: 30px 230px 30px 110px;
+        font-size: 28px;
+      }
+    }
+  }
+}

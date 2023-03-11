@@ -1,0 +1,21 @@
+@use "../../../foundation/mixin" as m;
+
+.top-title {
+  font-weight: 700;
+  text-align: center;
+  padding: 30px 0 15px;
+
+  @include m.mq(md) {
+    padding-bottom: 25px;
+  }
+
+  h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+  }
+
+  span {
+    font-size: 16px;
+    color: #a1998c;
+  }
+}

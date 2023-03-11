@@ -1,0 +1,132 @@
+@use "../../foundation/mixin" as m;
+
+.a-feature-banner {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: static;
+  height: auto;
+  margin-top: 35px;
+  margin-bottom: 100px;
+
+  @include m.mq(md) {
+    width: 769px;
+  }
+
+  @include m.mq(lg) {
+    width: 992px;
+  }
+
+  @include m.mq(xl) {
+    width: 1200px;
+  }
+
+  .swiper {
+    .swiper-wrapper {
+      .swiper-slide {
+        .card-box {
+          a {
+            display: block;
+
+            @include m.mq(md) {
+              position: relative;
+            }
+
+            img {
+              height: 220px;
+
+              @include m.mq(md) {
+                border-radius: 15px;
+                height: 500px;
+              }
+            }
+
+            .card-text-box {
+              @include m.mq(md) {
+                position: absolute;
+                top: 50%;
+                right: 50px;
+                transform: translateY(-50%);
+                background-color: rgba($color: #fff, $alpha: 0.85);
+                padding: 30px 30px;
+                font-weight: 700;
+                width: 350px;
+              }
+
+              @include m.mq(lg) {
+                right: 80px;
+                padding: 30px 50px;
+                width: 380px;
+              }
+
+              h3 {
+                font-weight: 700;
+                font-size: 17px;
+                padding: 10px 0;
+
+                @include m.mq(md) {
+                  font-size: 22px;
+                }
+
+                @include m.mq(lg) {
+                  font-size: 28px;
+                  margin-bottom: 10px;
+                }
+              }
+
+              .card-category {
+                small {
+                  border: 1px solid #4c372b;
+                  font-size: 11px;
+                  padding: 2px 8px;
+
+                  @include m.mq(md) {
+                    font-weight: 400;
+                    font-size: 14px;
+                  }
+
+                  @include m.mq(lg) {
+                    padding: 10px 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      background-color: transparent;
+      color: #fff;
+      opacity: 1;
+      top: calc(50% - 50px);
+      filter: drop-shadow(0 0 4px #000);
+    }
+
+    .swiper-pagination {
+      position: static;
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets
+      .swiper-pagination-bullet {
+      margin: 0;
+    }
+
+    .swiper-pagination-bullet {
+      width: 25px;
+      height: 5px;
+      display: inline-block;
+      border-radius: 0%;
+      background: #cec8c0;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+      background: #f3981b;
+    }
+  }
+}

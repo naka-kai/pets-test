@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+.more-button {
+  padding: 8px 32px;
+  border: 2px solid #4c372b;
+  border-radius: 6px;
+  background-color: #4c372b;
+  color: #fff;
+  font-weight: 700;
+  margin: 15px auto;
+}
+
+.more-button:hover {
+  background-color: #fff;
+  color: #4c372b;
+  border: 2px solid #4c372b;
+  padding: 8px 32px;
+}
